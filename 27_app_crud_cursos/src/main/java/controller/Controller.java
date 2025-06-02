@@ -8,17 +8,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Servlet implementation class Controller
+ * Este es un Servlet que nos sirve de controlador para manejar las acciones
+ * que permiten realizar las operaciones CRUD sobre los cursos. Cada accion es 
+ * un Servlet que se encarga de realizar una operacion especifica.
+ * @author Ruslan Tejerina
  */
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * Este es un Servlet que nos sirve de controlador para manejar las acciones
-	 * que permiten realizar las operaciones CRUD sobre los cursos. Cada accion es 
-	 * un Servlet que se encarga de realizar una operacion especifica.
-	 */
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String op = request.getParameter("op");
 		String url="menu.html";
